@@ -13,17 +13,14 @@
   },
   "homepage": "https://github.com/react-component/m-pull-to-refresh",
   "bugs": "https://github.com/react-component/m-pull-to-refresh/issues",
-  "files": [
-    "lib",
-    "assets/*.css"
-  ],
+  "files": ["lib", "assets/*.css"],
   "license": "MIT",
   "main": "./lib/PullToRefresh",
   "config": {
     "port": 8899
   },
   "scripts": {
-    "build": "rc-tools run build",
+    "build": "rc-tools run build --babel-runtime",
     "gh-pages": "rc-tools run gh-pages",
     "start": "rc-tools run server",
     "pub": "rc-tools run pub --babel-runtime",
@@ -36,16 +33,23 @@
   },
   "devDependencies": {
     "antd": "^1.2.1",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-app": "^3.0.2",
+    "del": "^3.0.0",
     "expect.js": "0.3.x",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-load-plugins": "^1.5.0",
     "pre-commit": "1.x",
+    "pump": "^1.0.2",
     "rc-tools": "5.x",
     "react": "15.x",
     "react-addons-test-utils": "15.x",
     "react-dom": "15.x"
   },
-  "pre-commit": [
-    "lint"
-  ],
   "dependencies": {
     "babel-runtime": "6.x",
     "zscroller": "~0.2.0"
