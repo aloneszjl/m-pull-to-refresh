@@ -28,11 +28,6 @@ class PullToRefresh extends React.Component {
     scrollerOptions: PropTypes.object
   };
 
-  static defaultProps = {
-    prefixCls: "rmc-pull-to-refresh",
-    distanceToRefresh: 50
-  };
-
   componentDidMount() {
     const { props, refs } = this;
     const { prefixCls } = props;
@@ -105,5 +100,10 @@ class PullToRefresh extends React.Component {
     );
   }
 }
+
+PullToRefresh.defaultProps = {
+  prefixCls: "rmc-pull-to-refresh",
+  distanceToRefresh: 50
+};
 
 export default PullToRefresh;
