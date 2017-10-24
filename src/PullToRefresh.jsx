@@ -28,6 +28,11 @@ class PullToRefresh extends React.Component {
     scrollerOptions: PropTypes.object
   };
 
+  constructor(props) {
+    super(props);
+    this.finishPullToRefresh = this.finishPullToRefresh.bind(this);
+  }
+
   componentDidMount() {
     const { prefixCls } = this.props;
     const containerClassList = this.container.classList;
